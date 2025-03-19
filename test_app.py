@@ -1,5 +1,5 @@
 import pytest  # Pytest framework import karna zaroori hai
-from test_app import add  # test_app.py se add function import kar rahe hain
+from main import add  # test_app.py se add function import kar rahe hain
 
 def test_add():
     assert add(2, 3) == 5  # Yeh test pass hona chahiye
