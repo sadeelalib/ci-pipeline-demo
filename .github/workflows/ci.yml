@@ -18,14 +18,7 @@ jobs:
           python-version: '3.9'
 
       - name: Install Dependencies
-        run: pip install pytest pytest-cov
+        run: pip install pytest
 
-      - name: Run Tests with Coverage
-        run: pytest --cov=main test_app.py
-
-      - name: Upload Coverage Report (HTML)
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: coverage-report
-          path: htmlcov
+      - name: Run Tests
+        run: pytest test_app.py
